@@ -4,3 +4,5 @@
 This is a luncher for MemRE! Without MemRE, this does nothing.
 
 ### Here for MemRE? I've included MemRE in the Precompiled build here, or you can find MemRE source here:
+
+### For more information, join MemRE Discord for full documentation, nightly builds, etc: https://discord.gg/7nGkqwdJhn
