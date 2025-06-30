@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+#include <Windows.h>
 #include <shellapi.h>
 #include <shlobj.h>
 #include <Commctrl.h>
@@ -124,7 +124,7 @@ bool RegisterMreExtension()
     if (dirty)
         SHChangeNotify(SHCNE_ASSOCCHANGED, SHCNF_IDLIST, nullptr, nullptr);
 
-    return dirty;   // <— this was missing!
+    return dirty;
 }
 
 BOOL WINAPI CtrlHandler(DWORD dwCtrlType)
@@ -204,7 +204,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
         if (hMain)
         {
             COPYDATASTRUCT cds = {};
-            cds.dwData = 1;  // “1 == LoadTableFromFile” handler
+            cds.dwData = 1;
             cds.cbData = static_cast<DWORD>((path.size() + 1) * sizeof(wchar_t));
             cds.lpData = (PVOID)path.c_str();
             SendMessageW(hMain, WM_COPYDATA, 0, (LPARAM)&cds);
